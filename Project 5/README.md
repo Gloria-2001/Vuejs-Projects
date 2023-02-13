@@ -1,9 +1,11 @@
-# quiz-game
+# Online-Store
 
 ## Project description
 ```
-This is a quiz game about mythology where the questions are taken from the API OpenDB. 
-The user is going to be competing against the computer, and the points will be shown in the scoreboard. 
+This is a simple online store where the user gets to add or remove items from 
+the bag and modify the quantity he's going to buy. The "check" is shown in the 
+"Shopping Bag" view. In addition, the items in the bag are store in Local Storage.
+It may be similar to Project 1, but this uses Vuex 
 ```
 
 ## Project setup

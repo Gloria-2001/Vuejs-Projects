@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main > section.items h4 {
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+main > section.items {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid lightgrey;
+    padding: 20px;
+    max-width: 500px;
+    min-width: 300px;
+    justify-content: center;
+    
+}
+
+section.items .product {
+    border: 1px solid lightgrey;
+    margin: 6px;
+    flex: 0 0 calc(33.333% - 24px);
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+}
+
+section.items .product.selected {
+    border: 2px solid rgb(29, 134, 233);
+
+}
+
+section.items .photo img {
+    max-width: 90px;
+    max-height: 50px;
+}
+
+section.items .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+section.items  .description .price {
+    font-weight: bold;
+    margin: 4px auto;
+}
+
+section.items  .description .quantity-area {
+    margin: 8px auto;
+    height: 14px;
+}
+
+section.items  .description .quantity-area button {
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+section.items  .description .quantity-area .quantity {
+    font-weight: bold;
+    margin: 0 4px;
+}
+
+
+section.summary {
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    min-height: 200px;
+    min-width: 200px;
+    text-align: center;
+}
+
+section.summary table {
+    width: 100%;
+    padding-top: 12px;
+    font-size: 11px;
+    margin: auto;
+}
+
+section.summary table tbody tr:last-of-type th {
+    border-top: 1px solid black;
+    padding-top: 4px;
+}
+
+/*Modal*/
+.modal{
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000 !important;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+  
+.modal-content{
+  position: relative;
+    /*background-color: rgba(0,0,0,0.4);*/
+    opacity: 1;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 2em;
+    width:fit-content;
+    /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    background-color:rgb(100, 40, 0);
+    width: 450px;
+}
+  
+.modal-header{
+  padding: 2px 16px;
+  
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#text-modal{
+  color: white;
+}
+
+@keyframes animatetop {
+  from {
+      top: -300px;
+      opacity: 0
+  }
+  to {
+      top: 0;
+      opacity: 1
+  }
+}
+
+.item-modal{
+    display: flex;
+    justify-content: center;
+}
+
+#logo-cafe{
+    width: 100px;
+    height: 100px;
+}
+
+#text-modal{
+    font-size: 25px;
+    text-align: center;
+}
+
+#boton-modal{
+    background-color: rgb(68, 138, 41);
+    color: white;
+    border-radius: 10px;
+    border-color: rgb(68, 138, 41);
+    text-align: center;
+    font-size: 18px;
+    align-self: center;
+}
+
+#boton-modal:hover{
+    background-color: rgb(33, 77, 16);
+    border-color: rgb(33, 77, 16);
+}
+
+
+

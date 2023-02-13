@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>To-Do List</title>
+    </head>
+
+    <body>
+        
+        <main id="app">
+            
+            <section class="todo-list">
+                
+                
+                <h3>To-do List</h3>
+                
+                <div class="all-todos">
+                    <div class="single-todo" 
+                        v-for="task in tasks"
+                        @click="task.done = !task.done; storeTasks()"
+                        :class = "task.done ? 'done' : ''" 
+                    >
+                        <p>{{task.name}}</p>
+                    </div>
+                </div>
+
+                <button class="clear" @click="tasks=[]; storeTasks()" v-if="tasks.length">Clear All</button>
+
+                <input type="text" placeholder="Add new to-do" v-model="newTask.name">
+                <button class="add" @click="addNewTask(); storeTasks()">Add</button>
+
+                <div class="instructions">
+                    Instructions:
+                    <ul>
+                        <li>Click the to-do text to toggle between done / undone</li>
+                        <li>Use clear all button to remove all items</li>
+                        <li>Use the input field to add new to-dos</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="scripts.js"></script>
+    </body>
+
+</html>

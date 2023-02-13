@@ -2,8 +2,9 @@
 
 ## Project description
 ```
-This is a quiz game about mythology where the questions are taken from the API OpenDB. The user is going to be competing against the computer, and 
-the points will be shown in the scoreboard. 
+This is a quiz game about mythology where the questions are taken from the API OpenDB. 
+The user is going to be competing against the computer, and the points will be shown in 
+the scoreboard. 
 ```
 
 ## Project setup
